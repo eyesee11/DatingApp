@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DatingSite</title>
   <link rel="stylesheet" href="styles.css">
+  <script src = "https://kit.fontawesome.com/a7a8925472.js" crossorigin="anonymous"></script>
+  <link href = "https://fonts.googleapis.com/css2?family=Lato&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title style="font-weight: bold; font-family: Georgia;">GEEKYमिलन</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav class="navbar" id="navbar">
@@ -13,42 +19,127 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="ABOUTUS.html">About</a></li> <!--connected to gurleen's about_us page-->
-        <li><a href="swipe_page.html">Services</a></li> <!--connected to the services page-->
+        <li><a href="#service">Services</a></li> <!--connected to the services page-->
         <li><a href="sign in.html">Log in</a></li> <!--connected to diya's login page-->
       </ul>
     </div>
 </nav>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title style="font-weight: bold; font-family: Georgia;">GEEKYमिलन</title>
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
+  <div class="header">
     <div class="banner">
       <h1 style="font-weight: bold; font-family: Georgia;">GEEKYमिलन</h1>
-      <p>MANAGE YOUR DATES(Pun Intended)</p>
+      <p>MANAGE YOUR DATES (Pun Intended)</p>
+      <button type = "submit" id = start>Get Started <i class="fa-solid fa-arrow-right"></i></button>
     </div>
-  </header>
-  
-  <section class="about-us" id="about-us">
-    <h2>About Us</h2>
-    <p>Love Connect is the premier destination for singles seeking meaningful connections. Our platform offers a safe and welcoming environment for individuals to find love, friendship, and everything in between.</p>
-  </section>
-  
-  <section class="couple-stories" id="couple-stories">
-    <h2>Couples Made Here</h2>
-    <div class="story">
-      <h3>John & Emily</h3>
-      <p>"We met on Love Connect and it was love at first sight. Now, we're planning our wedding!"</p>
+  </div>
+  <script>
+    document.getElementById("start").onclick = function(){
+      document.getElementById("fillout").scrollIntoView({behavior: 'smooth'});
+    };
+  </script>
+  <div class="model">
+    <center><span id = "heading">Match, Meet, Make Memories</span></center>
+    <center><span>Find you perfect half with Geekyमिलन</span></center>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/7tm6noF297tOmnus/scene.splinecode"></spline-viewer>
+  </div>
+  <div class="heading-features">
+    <span>Our Services</span>
+    <p>Discover the features that make Geekyमिलन the ultimate platform for college dating</p>
+  </div>
+  <div class="services" id = "service">
+    <div class="features">
+      <span id="head">AI-Based Match Suggestions</span><br>
+      <span>Showcase how the platform uses advanced algorithms to match users based on personality traits, interests, and behaviors, leading to highly compatible connections.</span>
     </div>
-    <div class="story">
-      <h3>Michael & Sarah</h3>
-      <p>"Thanks to Love Connect, we found each other and couldn't be happier."</p>
+    <div class="features">
+      <span id="head">Verified Profiles</span><br>
+      <span>Highlight that users are verified through identity checks (e.g., social media, government ID, or video verification) to ensure safety and authenticity on the platform.</span>
     </div>
-  </section>
-  
+    <div class="features">
+      <span id="head">Advanced Search Filters</span><br>
+      <span>Promote the ability to search for matches using detailed filters like location, interests, relationship goals, lifestyle preferences, and more, giving users control over their search.</span>
+    </div>
+    <div class="features">
+      <span id="head">Privacy and Safety Features</span><br>
+      <span>Emphasize privacy options like anonymous browsing, photo blurring, and the ability to control who sees their profile. Also, include safety tools like in-app reporting and an emergency button.</span>
+    </div>
+    <div class="features">
+      <span id="head">Real-Time Messaging and Video Chat</span><br>
+      <span>Display features like secure messaging and video chat options that allow users to communicate seamlessly and get to know each other before meeting in person.</span>
+    </div>
+    <div class="features">
+      <span id="head">Community and Interest-Based Groups</span><br>
+      <span>Highlight group-based features or events where users can meet others with similar interests, whether through forums, virtual events, or niche communities (e.g., for fitness enthusiasts or pet lovers).</span>
+    </div>
+  </div>
+  <div class="search-box" id = "fillout">
+    <div class="match">
+      <span id = "tagline">Discover The Love That Lasts Forever</span>
+      <span>Love is out there let's help you find it</span><br>
+      <input type="text" placeholder="Enter Name">
+      <input type="text" placeholder="Enter Age">
+      <input type="text" placeholder="Enter City">
+      <input type="text" placeholder="Enter DOB">
+      <center><button type = "submit">Search <i class="fa-solid fa-magnifying-glass"></i></button></center>
+    </div>
+  </div>
+    <div class="places">
+      <span id = "bold">Meet Your Match</span>
+      <span>Find your perfect match and plan your first date at the best places</span>
+      <div class="area1" id = "common1">
+        <button type = "submit">Restaurants</button>
+      </div>
+      <div class="area2" id = "common2"> 
+        <button type = "submit">Cafes</button>
+      </div>
+      <div class="area3" id = "common3">
+        <button type = "submit">Malls</button>
+      </div> 
+      <div class="area4" id = "common4">
+        <button type = "submit">Bars & Bistro</button>
+      </div>
+      <div class="area5" id = "common5">
+        <button type = "submit">Clubbing</button>
+      </div>
+    </div>
+    <script>
+        document.getElementById("common1").onclick = function() {
+        window.location.href = "https://maps.app.goo.gl/vZenBdC8qDHFMiGd9";
+      };
+        document.getElementById("common2").onclick = function() {
+        window.location.href = "https://maps.app.goo.gl/qmGkvv1GrCqWnMe8A";
+      };
+        document.getElementById("common3").onclick = function() {
+        window.location.href = "https://maps.app.goo.gl/kVJ5U1pp3FLL7ewG9";
+      };
+        document.getElementById("common4").onclick = function() {
+        window.location.href = "https://maps.app.goo.gl/LEkarDFkhfsygmwW9";
+      };
+        document.getElementById("common5").onclick = function() {
+        window.location.href = "https://maps.app.goo.gl/8xY2n9NxsHtN2NeV9";
+      };
+    </script>
+
+
+    <button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script>
+      let mybutton = document.getElementById("scrollToTopBtn");
+      window.onscroll = function() {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      mybutton.onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+    </script>
   <footer class="footer">
     <p>&copy; 2024 GEEKYमिलन. All rights reserved.</p>
         <div class="footer-container">
@@ -65,7 +156,5 @@
         </div>
       </footer>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
