@@ -330,31 +330,31 @@ body, html {
     width: 60vw;
   }
   .area1{
-    background-image: url("image/restaurants.jpg");
+    background-image: url("restaurants.jpg");
     background-size: cover;
     background-position: center;
     opacity: 70%;
   }
   .area2{
-    background-image: url("image/cafe.jpg");
+    background-image: url("cafe.jpg");
     background-size: cover;
     background-position: center;
     opacity: 70%;
   }
   .area3{
-    background-image: url("image/malls.jpg");
+    background-image: url("malls.jpg");
     background-size: cover;
     background-position: center;
     opacity: 70%;
   }
   .area4{
-    background-image: url("image/bars\ and\ bistro.jpg");
+    background-image: url("bars\ and\ bistro.jpg");
     background-size: cover;
     background-position: center;
     opacity: 70%;
   }
   .area5{
-    background-image: url("image/clubs.jpg");
+    background-image: url("clubs.jpg");
     background-size: cover;
     background-position: center;
     opacity: 70%;
