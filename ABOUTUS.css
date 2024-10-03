@@ -18,49 +18,20 @@ body, html {
     background-repeat: no-repeat; 
     background-position: center; 
   }
-  
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background-color: #343a40;
-  }
-  
   .brand {
     font-size: 1.8em;
     text-decoration: none;
     color: white;
   }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1em;
-    transition: color 0.3s;
-  }
-  
-  .nav-links a:hover {
-    color: #646464;
-  }
-  
   .header-banner {
-    padding: 50px 20px;
+    display: grid;
+    place-items: center;
   }
   
   .header-banner h1 {
-    margin: 0;
     font-size: 2.5em;
+    color: white;
+    font-family: "Poppins", sans-serif;
   }
   
   .header-banner p {
