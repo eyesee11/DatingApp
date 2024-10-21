@@ -3,158 +3,379 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DatingSite</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src = "https://kit.fontawesome.com/a7a8925472.js" crossorigin="anonymous"></script>
-  <link href = "https://fonts.googleapis.com/css2?family=Lato&display=swap">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title style="font-weight: bold; font-family: Georgia;">GEEKYमिलन</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>GEEKYमिलन - Dating Site</title>
+  <script src="https://kit.fontawesome.com/a7a8925472.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Georgia&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  
 </head>
 <body>
   <nav class="navbar" id="navbar">
     <div class="navbar-container">
-      <a href="index.html" class="brand">GEEKYमिलन</a>
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="GEEKYमिलन Logo" style="height: 65px;">
+      </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="ABOUTUS.html">About</a></li> <!--connected to gurleen's about_us page-->
-        <li><a href="#down">Services</a></li> <!--connected to the services page-->
-        <li><a href="sign in.html">Log in</a></li> <!--connected to diya's login page-->
+        <li><a href="#">Home</a></li>
+        <li><a href="ABOUTUS.html">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="signup.html">Sign in</a></li>
+        <li><a href="#" id="premium-btn">Premium</a></li>
       </ul>
     </div>
-</nav>
-</head>
-<body>
+    <!-- <a href="#" class="profile-icon">
+      <i class="fas fa-user"></i>
+    </a> -->
+  </nav>
+  
   <div class="header">
     <div class="banner">
-      <h1 style="font-weight: bold; font-family: Georgia;">GEEKYमिलन</h1>
-      <p>MANAGE YOUR DATES (Pun Intended)</p>
-      <button type = "submit" id = start>Get Started <i class="fa-solid fa-arrow-right"></i></button>
+      <h1>GEEKYमिलन</h1>
+      <p>Bookmark The Hearts</p>
+      <button type="submit" id="start" onclick="document.getElementById('fillout').scrollIntoView({behavior: 'smooth'});">Get Started <i class="fa-solid fa-arrow-down"></i></button>
     </div>
   </div>
-  <script>
-    document.getElementById("start").onclick = function(){
-      document.getElementById("fillout").scrollIntoView({behavior: 'smooth'});
-    };
-  </script>
+
   <div class="model">
-    <center><span id = "heading">Match, Meet, Make Memories</span></center>
-    <center><span>Find you perfect half with Geekyमिलन</span></center>
+    <span id="heading">Match, Meet, Make Memories</span>
+    <p>Find your perfect half with Geekyमिलन</p>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script>
     <spline-viewer url="https://prod.spline.design/7tm6noF297tOmnus/scene.splinecode"></spline-viewer>
   </div>
-  <div class="heading-features">
+
+  <div class="heading-features" id="services">
     <span id="down">Our Services</span>
     <p>Discover the features that make Geekyमिलन the ultimate platform for college dating</p>
   </div>
-  <div class="services" id = "service">
+
+
+
+
+  <!-- Chatbot integration -->
+  <div id="chat-icon" onclick="toggleChat()">
+    <i class="fas fa-comments" style="color:#1a0033; font-size :24px;"></i>
+</div>
+
+<div id="chatbot-container" class="chatbot-closed">
+    <div id="chatbot-header">
+       <span>Chat with Us!</span>
+       <button onclick="toggleChat()" style="background:none;border:none;color:white;">&times;</button>
+   </div>
+   <div id="chatbot-messages"></div>
+   <div id="chatbot-input">
+       <input type="text" id="user-input" placeholder="Type your message...">
+       <button id="send-button" onclick="sendMessage()">Send</button>
+   </div>
+</div>
+
+
+
+
+
+  <div class="services">
     <div class="features">
-      <span id="head">AI-Based Match Suggestions</span><br>
+      <span id="head">AI-Based Match Suggestions</span>
       <span>Showcase how the platform uses advanced algorithms to match users based on personality traits, interests, and behaviors, leading to highly compatible connections.</span>
     </div>
     <div class="features">
-      <span id="head">Verified Profiles</span><br>
+      <span id="head">Verified Profiles</span>
       <span>Highlight that users are verified through identity checks (e.g., social media, government ID, or video verification) to ensure safety and authenticity on the platform.</span>
     </div>
     <div class="features">
-      <span id="head">Advanced Search Filters</span><br>
+      <span id="head">Advanced Search Filters</span>
       <span>Promote the ability to search for matches using detailed filters like location, interests, relationship goals, lifestyle preferences, and more, giving users control over their search.</span>
     </div>
     <div class="features">
-      <span id="head">Privacy and Safety Features</span><br>
+      <span id="head">Privacy and Safety Features</span>
       <span>Emphasize privacy options like anonymous browsing, photo blurring, and the ability to control who sees their profile. Also, include safety tools like in-app reporting and an emergency button.</span>
     </div>
     <div class="features">
-      <span id="head">Real-Time Messaging and Video Chat</span><br>
+      <span id="head">Real-Time Messaging and Video Chat</span>
       <span>Display features like secure messaging and video chat options that allow users to communicate seamlessly and get to know each other before meeting in person.</span>
     </div>
     <div class="features">
-      <span id="head">Community and Interest-Based Groups</span><br>
+      <span id="head">Community and Interest-Based Groups</span>
       <span>Highlight group-based features or events where users can meet others with similar interests, whether through forums, virtual events, or niche communities (e.g., for fitness enthusiasts or pet lovers).</span>
     </div>
   </div>
-  <div class="search-box" id = "fillout">
+
+  <div class="search-box" id="fillout">
     <div class="match">
-      <span id = "tagline">Discover The Love That Lasts Forever</span>
+      <span id="tagline">Discover The Love That Lasts Forever</span>
       <span>Love is out there let's help you find it</span><br>
       <input type="text" placeholder="Enter Name">
       <input type="text" placeholder="Enter Age">
       <input type="text" placeholder="Enter City">
-      <input type="text" placeholder="Enter DOB">
-      <center><button type = "submit">Search <i class="fa-solid fa-magnifying-glass"></i></button></center>
+      <input type="date" id="date-picker" class="search-input">
+      <button type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+      <button type="submit" onclick="window.location.href='weather.html'">Check Weather <i class="fa-solid fa-eye"></i></button>
     </div>
   </div>
-    <div class="places">
-      <span id = "bold">Meet Your Match</span>
-      <span>Find your perfect match and plan your first date at the best places</span>
-      <div class="area1" id = "common1">
-        <button type = "submit">Restaurants</button>
-      </div>
-      <div class="area2" id = "common2"> 
-        <button type = "submit">Cafes</button>
-      </div>
-      <div class="area3" id = "common3">
-        <button type = "submit">Malls</button>
-      </div> 
-      <div class="area4" id = "common4">
-        <button type = "submit">Bars & Bistro</button>
-      </div>
-      <div class="area5" id = "common5">
-        <button type = "submit">Clubbing</button>
-      </div>
+
+  <div class="places">
+    <span id="bold">Meet Your Match</span>
+    <span>Find your perfect match and plan your first date at the best places</span>
+    <div class="area1" id="common1">
+      <button type="submit">Restaurants</button>
     </div>
-    <script>
-        document.getElementById("common1").onclick = function() {
-        window.location.href = "https://maps.app.goo.gl/vZenBdC8qDHFMiGd9";
-      };
-        document.getElementById("common2").onclick = function() {
-        window.location.href = "https://maps.app.goo.gl/qmGkvv1GrCqWnMe8A";
-      };
-        document.getElementById("common3").onclick = function() {
-        window.location.href = "https://maps.app.goo.gl/kVJ5U1pp3FLL7ewG9";
-      };
-        document.getElementById("common4").onclick = function() {
-        window.location.href = "https://maps.app.goo.gl/LEkarDFkhfsygmwW9";
-      };
-        document.getElementById("common5").onclick = function() {
-        window.location.href = "https://maps.app.goo.gl/8xY2n9NxsHtN2NeV9";
-      };
-    </script>
+    <div class="area2" id="common2"> 
+      <button type="submit">Cafes</button>
+    </div>
+    <div class="area3" id="common3">
+      <button type="submit">Malls</button>
+    </div> 
+    <div class="area4" id="common4">
+      <button type="submit">Bars & Bistro</button>
+    </div>
+    <div class="area5" id="common5">
+      <button type="submit">Clubbing</button>
+    </div>
+  </div>
 
+  <button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
-    <script>
-      let mybutton = document.getElementById("scrollToTopBtn");
-      window.onscroll = function() {
-        scrollFunction();
-      };
-      function scrollFunction() {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-      mybutton.onclick = function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      };
-    </script>
   <footer class="footer">
     <p>&copy; 2024 GEEKYमिलन. All rights reserved.</p>
-        <div class="footer-container">
-          <div class="footer-content">
-            <h3>GEEKYमिलन</h3>
-            <p>Connecting hearts around the world. Follow us on social media:</p>
-            <div class="social-icons">
-              <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-              <a href="https://instagram.com" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://linkedin.com" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+    <div class="footer-container">
+      <div class="footer-content">
+        <h3>GEEKYमिलन</h3>
+        <p>Connecting hearts around the world. Follow us on social media:</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Premium Subscription Popup -->
+  <div class="popup-overlay" id="popup-overlay">
+    <div class="popup-content">
+      <span class="close-popup" id="close-popup">&times;</span>
+      <div class="subscription-container">
+        <h1>Upgrade to Premium</h1>
+        <p>Get exclusive access to premium features and more perks!</p>
+        
+        <div class="plans">
+          <div class="plan">
+            <h2>Basic Plan</h2>
+            <p>$5/month</p>
+            <ul>
+              <li>Access to basic features</li>
+              <li>Email support</li>
+            </ul>
+            <button class="subscribe-btn" data-plan="Basic">Subscribe</button>
+          </div>
+          
+          <div class="plan">
+            <h2>Pro Plan</h2>
+            <p>$15/month</p>
+            <ul>
+              <li>All Basic features</li>
+              <li>Priority support</li>
+              <li>Access to premium content</li>
+            </ul>
+            <button class="subscribe-btn" data-plan="Pro">Subscribe</button>
+          </div>
+          
+          <div class="plan">
+            <h2>Ultimate Plan</h2>
+            <p>$25/month</p>
+            <ul>
+              <li>All Pro features</li>
+              <li>Dedicated support</li>
+              <li>Exclusive resources</li>
+            </ul>
+            <button class="subscribe-btn" data-plan="Ultimate">Subscribe</button>
           </div>
         </div>
-      </footer>
-  </footer>
+        
+        <p id="confirmation-message"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Scroll to fillout section
+    document.getElementById("start").onclick = function() {
+      document.getElementById("fillout").scrollIntoView({behavior: 'smooth'});
+    };
+
+    // Scroll to top button functionality
+    let mybutton = document.getElementById("scrollToTopBtn");
+    window.onscroll = function() {
+      scrollFunction();
+    };
+    function scrollFunction() {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    mybutton.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // Meet Your Match buttons functionality
+    document.getElementById("common1").onclick = function() {
+      window.location.href = "https://maps.app.goo.gl/vZenBdC8qDHFMiGd9";
+    };
+    document.getElementById("common2").onclick = function() {
+      window.location.href = "https://maps.app.goo.gl/qmGkvv1GrCqWnMe8A";
+    };
+    document.getElementById("common3").onclick = function() {
+      window.location.href = "https://maps.app.goo.gl/kVJ5U1pp3FLL7ewG9";
+    };
+    document.getElementById("common4").onclick = function() {
+      window.location.href = "https://maps.app.goo.gl/LEkarDFkhfsygmwW9";
+    };
+    document.getElementById("common5").onclick = function() {
+      window.location.href = "https://maps.app.goo.gl/8xY2n9NxsHtN2NeV9";
+    };
+
+    // Premium popup functionality
+    const premiumBtn = document.getElementById('premium-btn');
+    const popupOverlay = document.getElementById('popup-overlay');
+    const closePopup = document.getElementById('close-popup');
+    const subscribeButtons = document.querySelectorAll('.subscribe-btn');
+    const confirmationMessage = document.getElementById('confirmation-message');
+
+    premiumBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      popupOverlay.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+
+    closePopup.addEventListener('click', () => {
+      popupOverlay.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Allow scrolling
+    });
+
+    subscribeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+      const plan = button.getAttribute('data-plan');
+      confirmationMessage.textContent = `Thank you for subscribing to the ${plan} Plan!`;
+      window.location.href = 'payment.html';
+      });
+    });
+
+    // Close popup when clicking outside the content
+    popupOverlay.addEventListener('click', (e) => {
+      if (e.target === popupOverlay) {
+        popupOverlay.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Allow scrolling
+      }
+    });
+    let lastScrollTop = 0; // Keep track of last scroll position
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      navbar.classList.add('hidden');
+    } else {
+      // Scrolling up
+      navbar.classList.remove('hidden');
+    }
+    
+    lastScrollTop = scrollTop; // Update last scroll position
+  });
+
+
+  // Chatbot functionality
+  const url = 'https://cheapest-gpt-4-turbo-gpt-4-vision-chatgpt-openai-ai-api.p.rapidapi.com/v1/chat/completions';
+const options = {
+    method: 'POST',
+    headers: {
+        'x-rapidapi-key': 'c92a8ee81cmsh32da64c2c6b94f3p195216jsn262d567bed45', // Your RapidAPI key
+        'x-rapidapi-host': 'cheapest-gpt-4-turbo-gpt-4-vision-chatgpt-openai-ai-api.p.rapidapi.com',
+        'Content-Type': 'application/json'
+    }
+};
+//to open the chatbot container
+function toggleChat() {
+  const chatbotContainer = document.getElementById('chatbot-container');
+  const isOpen = chatbotContainer.classList.contains('chatbot-open');
+
+  if (isOpen) {
+      chatbotContainer.classList.remove('chatbot-open');
+      chatbotContainer.classList.add('chatbot-closed');
+      chatbotContainer.style.opacity = '0';
+      chatbotContainer.style.visibility = 'hidden';
+  } else {
+      chatbotContainer.classList.remove('chatbot-closed');
+      chatbotContainer.classList.add('chatbot-open');
+      chatbotContainer.style.opacity = '1';
+      chatbotContainer.style.visibility = 'visible';
+  }
+}
+//making it responsive
+async function sendMessage() {
+    const userInput = document.getElementById('user-input');
+    const messageText = userInput.value.trim();
+
+    if (messageText) {
+        const messagesDiv = document.getElementById('chatbot-messages');
+        
+        // Append user message
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.className = 'message user-message';
+        userMessageDiv.textContent = messageText;
+        messagesDiv.appendChild(userMessageDiv);
+        
+        // Clear input
+        userInput.value = '';
+
+        // Show loading message
+        const loadingMessageDiv = document.createElement('div');
+        loadingMessageDiv.className = 'message bot-message';
+        loadingMessageDiv.textContent = "Thinking...";
+        messagesDiv.appendChild(loadingMessageDiv);
+        
+        // Prepare body for API request
+        const body = JSON.stringify({
+            messages: [
+                {
+                    role: 'user',
+                    content: messageText
+                }
+            ],
+            model: 'gpt-4o', // Specify your model here
+            max_tokens: 100,
+            temperature: 0.9
+        });
+
+        try {
+            const response = await fetch(url, { ...options, body });
+            const data = await response.json();
+
+            // Remove loading message
+            messagesDiv.removeChild(loadingMessageDiv);
+
+            // Append bot response
+            const botMessageDiv = document.createElement('div');
+            botMessageDiv.className = 'message bot-message';
+            botMessageDiv.textContent = data.choices[0].message.content; // Adjust according to the API response structure
+            messagesDiv.appendChild(botMessageDiv);
+            
+            // Scroll to bottom of messages
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+        } catch (error) {
+            console.error(error);
+            alert('Error fetching response from API. Please try again.');
+            
+            // Remove loading message on error
+            messagesDiv.removeChild(loadingMessageDiv);
+        }
+    }
+}
+
+  </script>
 </body>
 </html>
